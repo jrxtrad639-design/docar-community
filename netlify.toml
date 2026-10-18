@@ -1,0 +1,9 @@
+[build]
+  publish = "."
+  command = ""
+
+# Opsional: Redirect agar URL root langsung mengarah ke halaman admin
+[[redirects]]
+  from = "/"
+  to = "/admin/"
+  status = 200
