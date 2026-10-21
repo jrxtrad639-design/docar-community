@@ -17,7 +17,7 @@ const SUPABASE_URL='https://tausopeztiluvrpokgbf.supabase.co';
 const SUPABASE_ANON_KEY='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRhdXNvcGV6dGlsdXZycG9rZ2JmIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTE2Mjg4MjIsImV4cCI6MjEwNzIwNDgyMn0.BB3obOY6pfQY1RYcsuZnTl-zTnR8NRk2k9pgyphP4M8';
 const FUNCTION_URL=SUPABASE_URL+'/functions/v1/docar-admin-driver';
 let token=localStorage.getItem('docar-driver-token')||'',community=null,me=null,drivers=[],statuses=[],timer=null;
-const fallback=[{id:'ready',icon:'🟢',name:'Om Swastiastu',desc:'Siap menerima order',c:'#1b9a4a',bg:'#effaf2'},{id:'busy',icon:'🟡',name:'Astungkarā Mesari',desc:'Sedang menjalankan order',c:'#d7a300',bg:'#fff9df'},{id:'offline',icon:'🔴',name:'Mesanekan',desc:'Sedang tidak tersedia',c:'#d83a3a',bg:'#fff1f1'},{id:'done',icon:'🙏',name:'Shanti...Shanti...Shanti',desc:'Order selesai',c:'#737b76',bg:'#f1f3f2'}];
+const fallback=[{id:'ready',icon:'🟢',name:'Om Swastiastu',desc:'Siap menerima order',c:'#1b9a4a',bg:'#effaf2'},{id:'busy',icon:'🟡',name:'Memargi Antar',desc:'Sedang menjalankan order',c:'#d7a300',bg:'#fff9df'},{id:'offline',icon:'🔴',name:'Mesanekan',desc:'Sedang tidak tersedia',c:'#d83a3a',bg:'#fff1f1'},{id:'done',icon:'🙏',name:'Shanti...Shanti...Shanti',desc:'Order selesai',c:'#737b76',bg:'#f1f3f2'}];
 function esc(v){return String(v??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]))}
 function setErr(t){document.getElementById('loginError').innerHTML=t?'<div class="error">'+esc(t)+'</div>':''}
 function statusOf(id){return statuses.find(x=>x.id===id)||fallback.find(x=>x.id===id)||fallback[0]}
